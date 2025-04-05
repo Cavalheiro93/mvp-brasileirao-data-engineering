@@ -7,9 +7,9 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Databricks Community Edition**: para ingestão, transformação e tratamento dos dados com PySpark
+- **Databricks Community Edition**: para ingestão, transformação e tratamento dos dados com PySpark (ETL)
 - **AWS S3**: armazenamento em Data Lake (Bronze, Silver, Gold)
-- **Amazon Redshift Serverless**: carga final dos dados para consumo analítico
+- **Amazon Redshift Serverless**: utilizado como Data Warehouse para armazenar a camada Gold do projeto, estruturada em Data Marts temáticos focados em clubes, jogadores e métricas estatísticas.
 - **PySpark + SQL**: para manipulação, modelagem e criação de data marts
 - **GitHub**: versionamento e documentação do projeto
 
