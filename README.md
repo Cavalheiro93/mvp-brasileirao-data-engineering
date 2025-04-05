@@ -6,11 +6,11 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 ---
 ## 📚 Sumário
 
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Estrutura de Pastas](#-estrutura-de-pastas)
-- [Notebooks do Projeto](#-notebooks-do-projeto)
-- [Observações](#-observações)
-- [Notebook 00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
+- [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [📁 Estrutura de Pastas](#-estrutura-de-pastas)
+- [📒 Notebooks do Projeto](#-notebooks-do-projeto)
+- [📌 Observações](#-observações)
+- [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 
 
 
