@@ -115,7 +115,7 @@ Este notebook trata os dados estatísticos dos jogadores por partida, realizando
 
 
 
-#### 3D. Correção de Datas e Partidas Ausentes | 02D-Correcao-Datas-e-Partidas-Ausentes📎
+#### 3D. Correção de Datas e Partidas Ausentes | [02D-Correcao-Datas-e-Partidas-Ausentes📎](notebooks/02D-Correcao-Datas-e-Partidas-Ausentes.ipynb)
 
 Este notebook realiza correções importantes nos dados da tabela de estatísticas dos jogadores, garantindo integridade e consistência antes de seguirmos para análises na camada Silver.
 
