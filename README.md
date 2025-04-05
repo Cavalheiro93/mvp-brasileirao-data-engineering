@@ -93,10 +93,8 @@ Este notebook realiza a leitura dos dados de partidas diretamente da camada Bron
 Este notebook realiza o tratamento da tabela de classificação dos clubes, transformando os dados brutos da Bronze em um formato estruturado para análise na camada Silver.
 
 - Leitura do arquivo `BrasilSerieA_2024_ClassificacaoFinal.csv` na Bronze
-- Remoção de colunas desnecessárias (como `Notas`, `Sofascore`)
 - Renomeação de colunas para padronização
-- Conversão da coluna `Posição` para o tipo numérico
-- Criação do campo `Tier` com base na posição do clube
+- Criação de um dicionário de clubes, para padronizar os nomes
 - Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
