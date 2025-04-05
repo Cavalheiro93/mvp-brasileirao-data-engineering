@@ -30,7 +30,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 ├── 📁 images/              → Diagramas, capturas de tela e elementos visuais do projeto
 ├── README.md              → Documentação geral do projeto
 └── placeholder.txt        → Arquivo temporário para inicializar o repositório
-
+```
 
 
 ## 📒 Notebooks do Projeto
@@ -40,8 +40,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 | 00    | `00-Configuracao.ipynb`  | Leitura das credenciais, configuração do S3 e testes de conexão |
 
 
-## 📌 Observações
-
+### 📌 Observações
 > 🔐 **Credenciais AWS** não estão incluídas no repositório por segurança.  
 > O arquivo `aws_credentials.json` foi usado localmente para leitura via Spark no notebook `00-Configuracao`.
 
