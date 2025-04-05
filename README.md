@@ -4,6 +4,13 @@ Este projeto foi desenvolvido como parte da Pós-Graduação em Data Science e A
 O objetivo é construir um pipeline completo de Engenharia de Dados usando ferramentas do mercado, com foco em dados reais do Campeonato Brasileiro Série A 2024.
 
 ---
+## 📚 Sumário
+
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura de Pastas](#-estrutura-de-pastas)
+- [Notebooks do Projeto](#-notebooks-do-projeto)
+- [Observações](#-observações)
+
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -47,10 +54,5 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 ---
 
 
-## 📚 Sumário
 
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Estrutura de Pastas](#-estrutura-de-pastas)
-- [Notebooks do Projeto](#-notebooks-do-projeto)
-- [Observações](#-observações)
 
