@@ -115,3 +115,11 @@ Este notebook trata os dados estatísticos dos jogadores por partida, realizando
 
 
 
+#### 3D. Correção de Datas e Partidas Ausentes | 02D-Correcao-Datas-e-Partidas-Ausentes📎
+
+Este notebook realiza correções importantes nos dados da tabela de estatísticas dos jogadores, garantindo integridade e consistência antes de seguirmos para análises na camada Silver.
+
+- Identificação de divergências entre datas de partidas nos arquivos de estatísticas e todas as partidas
+- Encontrado um padrão, onde as datas diferentes das partidas são de -1 dia
+- Correção das datas incorretas com base no dataset validado (fbref.com)
+- Salvamento do DataFrame final corrigido na camada Silver no formato Parquet
