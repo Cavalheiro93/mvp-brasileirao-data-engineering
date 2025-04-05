@@ -18,6 +18,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 
 ## 📁 Estrutura de Pastas
 
+```plaintext
 ├── 📁 data/                → Contém os dados divididos por camadas do Data Lake
 │   ├── 📂 bronze/          → Dados brutos, exatamente como foram recebidos (raw)
 │   ├── 📂 silver/          → Dados tratados, limpos e padronizados
@@ -29,6 +30,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 ├── 📁 images/              → Diagramas, capturas de tela e elementos visuais do projeto
 ├── README.md              → Documentação geral do projeto
 └── placeholder.txt        → Arquivo temporário para inicializar o repositório
+
 
 
 ## 📒 Notebooks do Projeto
