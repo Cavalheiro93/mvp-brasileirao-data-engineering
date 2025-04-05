@@ -3,7 +3,8 @@
 Este projeto foi desenvolvido como parte da Pós-Graduação em Data Science e Analytics da PUC-Rio.  
 O objetivo é construir um pipeline completo de Engenharia de Dados usando ferramentas do mercado, com foco em dados reais do Campeonato Brasileiro Série A 2024.
 
----
+
+<br></br>
 ## 📚 Sumário
 
 - [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
@@ -13,8 +14,8 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 - [<img src="images/icons/notebook-python.png" width="25" height="25"/> 00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 
----
 
+<br></br>
 ## 🚀 Tecnologias Utilizadas
 
 - **Databricks Community Edition**: para ingestão, transformação e tratamento dos dados com PySpark (ETL)
@@ -23,8 +24,8 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - **PySpark + SQL**: para manipulação, modelagem e criação de data marts
 - **GitHub**: versionamento e documentação do projeto
 
----
 
+<br></br>
 ## 📁 Estrutura de Pastas
 
 ```plaintext
@@ -41,8 +42,8 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 └── placeholder.txt        → Arquivo temporário para inicializar o repositório
 ```
 
----
 
+<br></br>
 ## 📒 Notebooks do Projeto
 
 | Ordem | Nome do Notebook         | Descrição                                                       | Link
@@ -54,8 +55,8 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 > 🔐 **Credenciais AWS** não estão incluídas no repositório por segurança.  
 > O arquivo `aws_credentials.json` foi usado localmente para leitura via Spark no notebook `00-Configuracao`.
 
----
 
+<br></br>
 ## 🧭 Etapas do Projeto
 O projeto foi construído de forma sequencial, seguindo boas práticas de engenharia de dados. Abaixo, descrevemos cada uma das etapas realizadas:
 
@@ -67,6 +68,8 @@ O projeto foi construído de forma sequencial, seguindo boas práticas de engenh
 - Armazenamento seguro das credenciais em um arquivo `.json`
 - Configuração do acesso ao S3 no Databricks usando `spark.conf`
 
+<br></br>
+
 ### 2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
 Esta etapa teve como objetivo principal visualizar e documentar todas as colunas disponíveis nos arquivos brutos, a fim de entender a estrutura dos dados recebidos e decidir quais colunas seriam aproveitadas nas próximas etapas do pipeline.
 
@@ -74,6 +77,8 @@ Esta etapa teve como objetivo principal visualizar e documentar todas as colunas
 - Registro do nome dos campos, tipo e respectivas descrições de cada um deles
 - Adição de atributos informativos: valores mínimos e máximos, total de registros, registros nulos e registros distintos
 - Detalhamento da fonte dos dados: link da origem, nome do arquivo original e nome utilizado no Databricks/S3
+
+<br></br>
 
 ### 3. 📙 Limpeza e Tratamento dos Dados
 
