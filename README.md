@@ -45,3 +45,12 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 > O arquivo `aws_credentials.json` foi usado localmente para leitura via Spark no notebook `00-Configuracao`.
 
 ---
+
+
+## 📚 Sumário
+
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura de Pastas](#-estrutura-de-pastas)
+- [Notebooks do Projeto](#-notebooks-do-projeto)
+- [Observações](#-observações)
+
