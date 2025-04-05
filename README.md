@@ -11,7 +11,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - [📒 Notebooks do Projeto](#-notebooks-do-projeto)
 - [📌 Observações](#-observações)
 - [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
-- <img src="images/notebook.png" width="18"/> [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
+- [<img src="images/icons/notebook-python.png" width="25" height="25"/> 00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 
 ---
 
@@ -60,7 +60,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 O projeto foi construído de forma sequencial, seguindo boas práticas de engenharia de dados. Abaixo, descrevemos cada uma das etapas realizadas:
 
 
-### 1. 📘 Configuração Inicial | [00-Configuracao📎](notebooks/00-Configuracao.ipynb)
+### 1. 📘 Configuração Inicial | [00-Configuracao[<img src="images/icons/notebook-python.png" width="25" height="25"/>](notebooks/00-Configuracao.ipynb)
 - Criação da conta na AWS
 - Criação do bucket S3 com as camadas bronze, silver e gold
 - Criação de credenciais IAM e geração das chaves de acesso
