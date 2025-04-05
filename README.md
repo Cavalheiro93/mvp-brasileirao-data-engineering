@@ -57,19 +57,22 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 ---
 
 ## 🧭 Etapas do Projeto
-
 O projeto foi construído de forma sequencial, seguindo boas práticas de engenharia de dados. Abaixo, descrevemos cada uma das etapas realizadas:
 
-1. 📘 Configuração Inicial | [00-Configuracao📎](notebooks/00-Configuracao.ipynb)
+
+### 1. 📘 Configuração Inicial | [00-Configuracao📎](notebooks/00-Configuracao.ipynb)
 - Criação da conta na AWS
 - Criação do bucket S3 com as camadas bronze, silver e gold
 - Criação de credenciais IAM e geração das chaves de acesso
 - Armazenamento seguro das credenciais em um arquivo `.json`
 - Configuração do acesso ao S3 no Databricks usando `spark.conf`
 
-2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
-- Criação do catálogo no Metastore do Databricks com os dados **brutos (raw)** armazenados na camada Bronze  
-- Registro do nome dos campos e das respectivas descrições de cada um deles
-- Detalhes da Fonte de dados
+### 2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
+Esta etapa teve como objetivo principal visualizar e documentar todas as colunas disponíveis nos arquivos brutos, a fim de entender a estrutura dos dados recebidos e decidir quais colunas seriam aproveitadas nas próximas etapas do pipeline.
+
+- Criação do catálogo no Metastore do Databricks com os dados brutos (raw) armazenados na camada Bronze
+- Registro do nome dos campos, tipo e respectivas descrições de cada um deles
+- Adição de atributos informativos: valores mínimos e máximos, total de registros, registros nulos e registros distintos
+- Detalhamento da fonte dos dados: link da origem, nome do arquivo original e nome utilizado no Databricks/S3
 
 
