@@ -69,8 +69,7 @@ O projeto foi construído de forma sequencial, seguindo boas práticas de engenh
 
 2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
 - Criação do catálogo no Metastore do Databricks com os dados **brutos (raw)** armazenados na camada Bronze  
-- Registro das tabelas no schema `default` para permitir consultas SQL  
-- Organização dos dados por pastas: `classificacao`, `estatisticas`, `todas_partidas`  
-- Validação das tabelas criadas com leitura simples via SQL e Spark
+- Registro do nome dos campos e das respectivas descrições de cada um deles
+- Detalhes da Fonte de dados
 
 
