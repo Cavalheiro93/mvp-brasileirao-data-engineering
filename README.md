@@ -60,7 +60,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 O projeto foi construído de forma sequencial, seguindo boas práticas de engenharia de dados. Abaixo, descrevemos cada uma das etapas realizadas:
 
 
-### 1. 📘 Configuração Inicial | [00-Configuracao[<img src="images/icons/notebook-python.png" width="25" height="25"/>](notebooks/00-Configuracao.ipynb)
+### 1. 📘 Configuração Inicial | [00-Configuracao 📎](notebooks/00-Configuracao.ipynb)
 - Criação da conta na AWS
 - Criação do bucket S3 com as camadas bronze, silver e gold
 - Criação de credenciais IAM e geração das chaves de acesso
@@ -74,5 +74,20 @@ Esta etapa teve como objetivo principal visualizar e documentar todas as colunas
 - Registro do nome dos campos, tipo e respectivas descrições de cada um deles
 - Adição de atributos informativos: valores mínimos e máximos, total de registros, registros nulos e registros distintos
 - Detalhamento da fonte dos dados: link da origem, nome do arquivo original e nome utilizado no Databricks/S3
+
+### 3. Limpeza e Tratamento dos Dados
+#### 3A. 📙 Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
+Este notebook realiza a leitura dos dados de partidas diretamente da camada Bronze, aplicando diversas transformações para prepará-los para a camada Silver.
+- Leitura do arquivo `BrasilSerieA_2024_TodasPartidas.csv` na Bronze
+- Remoção de colunas irrelevantes (ex: colunas com odds de apostas)
+- Filtro para considerar apenas partidas da temporada **2024**
+- Remoção de linhas duplicadas e com dados ausentes críticos
+- Criação das colunas:
+  - `Match_ID`: identificador único da partida
+  - `Trimestre`: com base na data da partida
+  - `Turno`: para indicar se é 1º ou 2º turno do campeonato
+- Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
+
+  
 
 
