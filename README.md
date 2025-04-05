@@ -55,6 +55,13 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 
 ---
 
+## 🧭 Etapas do Projeto
 
+O projeto foi construído de forma sequencial, seguindo boas práticas de engenharia de dados. Abaixo, descrevemos cada uma das etapas realizadas:
 
+1. 📘 Configuração Inicial | [00-Configuracao📎](notebooks/00-Configuracao.ipynb)
+
+- Criação do bucket S3 com as camadas Bronze, Silver e Gold
+- Definição de credenciais seguras em arquivo .json
+- Configuração do acesso no Databricks via Spark
 
