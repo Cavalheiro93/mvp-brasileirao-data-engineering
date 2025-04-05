@@ -11,6 +11,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - [📒 Notebooks do Projeto](#-notebooks-do-projeto)
 - [📌 Observações](#-observações)
 - [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
+- <img src="images/notebook.png" width="18"/> [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 
 
 
