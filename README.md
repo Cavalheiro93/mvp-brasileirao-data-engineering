@@ -13,6 +13,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 - <img src="images/notebook.png" width="18"/> [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 
+---
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -23,7 +24,6 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - **GitHub**: versionamento e documentação do projeto
 
 ---
-
 
 ## 📁 Estrutura de Pastas
 
@@ -41,6 +41,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 └── placeholder.txt        → Arquivo temporário para inicializar o repositório
 ```
 
+---
 
 ## 📒 Notebooks do Projeto
 
@@ -60,8 +61,16 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 O projeto foi construído de forma sequencial, seguindo boas práticas de engenharia de dados. Abaixo, descrevemos cada uma das etapas realizadas:
 
 1. 📘 Configuração Inicial | [00-Configuracao📎](notebooks/00-Configuracao.ipynb)
+- Criação da conta na AWS
+- Criação do bucket S3 com as camadas bronze, silver e gold
+- Criação de credenciais IAM e geração das chaves de acesso
+- Armazenamento seguro das credenciais em um arquivo `.json`
+- Configuração do acesso ao S3 no Databricks usando `spark.conf`
 
-- Criação do bucket S3 com as camadas Bronze, Silver e Gold
-- Definição de credenciais seguras em arquivo .json
-- Configuração do acesso no Databricks via Spark
+2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
+- Criação do catálogo no Metastore do Databricks com os dados **brutos (raw)** armazenados na camada Bronze  
+- Registro das tabelas no schema `default` para permitir consultas SQL  
+- Organização dos dados por pastas: `classificacao`, `estatisticas`, `todas_partidas`  
+- Validação das tabelas criadas com leitura simples via SQL e Spark
+
 
