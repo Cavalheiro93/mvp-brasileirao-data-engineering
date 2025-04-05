@@ -75,8 +75,8 @@ Esta etapa teve como objetivo principal visualizar e documentar todas as colunas
 - Adição de atributos informativos: valores mínimos e máximos, total de registros, registros nulos e registros distintos
 - Detalhamento da fonte dos dados: link da origem, nome do arquivo original e nome utilizado no Databricks/S3
 
-### 3. Limpeza e Tratamento dos Dados
-#### 3A. 📙 Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
+### 3. 📙 Limpeza e Tratamento dos Dados
+#### 3A. Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
 Este notebook realiza a leitura dos dados de partidas diretamente da camada Bronze, aplicando diversas transformações para prepará-los para a camada Silver.
 - Leitura do arquivo `BrasilSerieA_2024_TodasPartidas.csv` na Bronze
 - Remoção de colunas irrelevantes (ex: colunas com odds de apostas)
@@ -87,6 +87,18 @@ Este notebook realiza a leitura dos dados de partidas diretamente da camada Bron
   - `Trimestre`: com base na data da partida
   - `Turno`: para indicar se é 1º ou 2º turno do campeonato
 - Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
+
+#### 3B. Ingestão Bronze - Classificação Final | [02B-Ingestao-Bronze-Classificacao📎](notebooks/02B-Ingestao-Bronze-Classificacao.ipynb)
+
+Este notebook realiza o tratamento da tabela de classificação dos clubes, transformando os dados brutos da Bronze em um formato estruturado para análise na camada Silver.
+
+- Leitura do arquivo `BrasilSerieA_2024_ClassificacaoFinal.csv` na Bronze
+- Remoção de colunas desnecessárias (como `Notas`, `Sofascore`)
+- Renomeação de colunas para padronização
+- Conversão da coluna `Posição` para o tipo numérico
+- Criação do campo `Tier` com base na posição do clube
+- Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
+
 
   
 
