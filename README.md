@@ -13,6 +13,12 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 - <img src="images/notebook.png" width="18"/> [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb)
 
+- <img src="images/notebook.png" width="18"/> [00 - Configuração Inicial](notebooks/00-Configuracao.ipynb) → Leitura das credenciais, configuração do S3 e testes de conexão
+- <img src="images/notebook.png" width="18"/> [01 - Ingestão Bronze](notebooks/01-Ingestao-Bronze.ipynb) → Leitura dos arquivos brutos e gravação na camada Bronze
+- <img src="images/notebook.png" width="18"/> [02 - Transformação Silver](notebooks/02-Transformacao-Silver.ipynb) → Limpeza, padronização e tratamento dos dados
+- <img src="images/notebook.png" width="18"/> [03 - Modelagem Gold](notebooks/03-Modelagem-Gold.ipynb) → Criação dos Data Marts para análise
+- <img src="images/notebook.png" width="18"/> [04 - Carga no Redshift](notebooks/04-Carga-Redshift.ipynb) → Envio dos Data Marts para o Amazon Redshift Serverless
+
 
 
 ## 🚀 Tecnologias Utilizadas
