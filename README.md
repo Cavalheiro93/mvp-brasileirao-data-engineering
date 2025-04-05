@@ -15,5 +15,32 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 
 ---
 
+
 ## 📁 Estrutura de Pastas
 
+├── 📁 data/                → Contém os dados divididos por camadas do Data Lake
+│   ├── 📂 bronze/          → Dados brutos, exatamente como foram recebidos (raw)
+│   ├── 📂 silver/          → Dados tratados, limpos e padronizados
+│   └── 📂 gold/            → Dados modelados prontos para análise e consumo (Data Marts)
+
+├── 📁 notebooks/           → Notebooks com cada etapa do pipeline de dados
+│   └── 00-Configuracao     → Notebook de configuração de ambiente e credenciais
+
+├── 📁 images/              → Diagramas, capturas de tela e elementos visuais do projeto
+├── README.md              → Documentação geral do projeto
+└── placeholder.txt        → Arquivo temporário para inicializar o repositório
+
+
+## 📒 Notebooks do Projeto
+
+| Ordem | Nome do Notebook        | Descrição                                          |
+|-------|--------------------------|-----------------------------------------------------|
+| 00    | `00-Configuracao.ipynb`  | Leitura das credenciais, configuração do S3 e testes de conexão |
+
+
+## 📌 Observações
+
+> 🔐 **Credenciais AWS** não estão incluídas no repositório por segurança.  
+> O arquivo `aws_credentials.json` foi usado localmente para leitura via Spark no notebook `00-Configuracao`.
+
+---
