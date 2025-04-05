@@ -80,6 +80,7 @@ Esta etapa teve como objetivo principal visualizar e documentar todas as colunas
 
 ### 3. 📙 Limpeza e Tratamento dos Dados
 
+
 #### 3A. Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
 Este notebook realiza a leitura dos dados de partidas diretamente da camada Bronze, aplicando diversas transformações para prepará-los para a camada Silver.
 - Leitura do arquivo `BrasilSerieA_2024_TodasPartidas.csv` na Bronze
@@ -92,6 +93,7 @@ Este notebook realiza a leitura dos dados de partidas diretamente da camada Bron
   - `Turno`: para indicar se é 1º ou 2º turno do campeonato
 - Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
 
+
 #### 3B. Ingestão Bronze - Classificação Final | [02B-Ingestao-Bronze-Classificacao📎](notebooks/02B-Ingestao-Bronze-Classificacao.ipynb)
 
 Este notebook realiza o tratamento da tabela de classificação dos clubes, transformando os dados brutos da Bronze em um formato estruturado para análise na camada Silver.
@@ -101,7 +103,8 @@ Este notebook realiza o tratamento da tabela de classificação dos clubes, tran
 - Criação de um dicionário de clubes, para padronizar os nomes
 - Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
 
-#### 3C. 📘 Ingestão Bronze - Estatísticas por Jogador e Partida | [02C-Ingestao-Bronze-EstatisticaJogadorPorPartida📎](notebooks/02C-Ingestao-Bronze-EstatisticaJogadorPorPartida.ipynb)
+
+#### 3C. Ingestão Bronze - Estatísticas por Jogador e Partida | [02C-Ingestao-Bronze-EstatisticaJogadorPorPartida📎](notebooks/02C-Ingestao-Bronze-EstatisticaJogadorPorPartida.ipynb)
 
 Este notebook trata os dados estatísticos dos jogadores por partida, realizando ajustes essenciais antes de armazená-los na camada Silver.
 
@@ -112,7 +115,6 @@ Este notebook trata os dados estatísticos dos jogadores por partida, realizando
 - Correção no Tipo de Dado de algumas colunas
 - ⚠️ Ajustes na base de dados por falta de informação
 - Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
-
 
 
 #### 3D. Correção de Datas e Partidas Ausentes | [02D-Correcao-Datas-e-Partidas-Ausentes📎](notebooks/02D-Correcao-Datas-e-Partidas-Ausentes.ipynb)
