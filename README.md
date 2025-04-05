@@ -44,9 +44,9 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 
 ## 📒 Notebooks do Projeto
 
-| Ordem | Nome do Notebook        | Descrição                                          |
-|-------|--------------------------|-----------------------------------------------------|
-| 00    | `00-Configuracao.ipynb`  | Leitura das credenciais, configuração do S3 e testes de conexão |
+| Ordem | Nome do Notebook         | Descrição                                                       | Link
+|-------|--------------------------|-----------------------------------------------------------------|-------|
+| 00    | `00-Configuracao.ipynb`  | Leitura das credenciais, configuração do S3 e testes de conexão |[Link](notebooks/00-Configuracao.ipynb)
 
 
 ### 📌 Observações
