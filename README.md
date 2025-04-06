@@ -266,6 +266,13 @@ Essa abordagem nos permitiu:
 <br></br>
 
 
-# 📊 Perguntas e Respostas do Projeto
+# 📊 Perguntas e Respostas do Projeto | 📓 [`06C-Respostas.ipynb`](notebooks/06C-Respostas.ipynb)
 
-aaaa
+Para finalizar o pipeline, criamos um caderno com as respostas baseadas nas perguntas definidas no início do projeto.
+
+Essa etapa utilizou consultas **SQL com Spark** diretamente sobre as tabelas armazenadas no **Amazon Redshift**, permitindo análises rápidas e contextualizadas com base nos dados transformados na Camada Gold.
+
+Algumas respostas foram complementadas com gráficos utilizando o matplotlib, trazendo mais clareza e facilitando a contextualização dos dados analisados.
+
+
+
