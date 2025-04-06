@@ -179,7 +179,18 @@ O Catálogo de dados da Camada Gold foram registrados no **Metastore do Databric
 ![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-gold-pastas-arquivos-finais.jpg)
 
 4A - Transformação por Clube | [04A-Transformacao-Gold-Mart-Clubes](notebooks/04A-Transformacao-Gold-Mart-Clubes.ipynb)  
-4B - Transformação por Jogador | [04B-Transformacao-Gold-Mart-Jogadores](notebooks/04B-Transformacao-Gold-Mart-Jogadores.ipynb)  
-4C - Informações Complementares dos Jogadores | [04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb](notebooks/04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb)  
+- Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
+- Criação de Views Temporárias
+- Criação de métricas de normalização
+- Criando pesos para cada uma dessas métricas
+- Criando um Score beseado na soma dessas métricas de normalização, para o resultado final do desempenho do clube
+4B - Transformação por Jogador | [04B-Transformacao-Gold-Mart-Jogadores](notebooks/04B-Transformacao-Gold-Mart-Jogadores.ipynb)
+- Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
+- Criação de Views Temporárias
+- Criação de métricas de normalização
+- Criando pesos para cada uma dessas métricas
+- Criando um Score beseado na soma dessas métricas de normalização, para o resultado final do desempenho do Jogador
+4C - Informações Complementares dos Jogadores | [04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb](notebooks/04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb)
+- 
 4D - Registro no Metastore | [05-Catalogo de Dados no Metastore do Databricks Gold](notebooks/05-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Gold.ipynb)
 
