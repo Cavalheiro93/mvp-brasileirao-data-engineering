@@ -53,13 +53,22 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 > 🔐 **Credenciais AWS** não estão incluídas no repositório por segurança.  
 > O arquivo `aws_credentials.json` foi usado localmente para leitura via Spark no notebook `00-Configuracao`.
 
+---
 
 <br></br>
-## 🧭 Etapas do Projeto
-O projeto foi construído de forma sequencial, seguindo boas práticas de engenharia de dados. Abaixo, descrevemos cada uma das etapas realizadas:
+# 🧭 Etapas do Projeto
 
 
-### 1. 📘 Configuração Inicial | [00-Configuracao 📎](notebooks/00-Configuracao.ipynb)
+## 1. Configuração Inicial 🛠️
+O projeto foi construído com base na integração entre `AWS` e `Databricks`, com o objetivo de aprofundar o uso dessas duas tecnologias.
+<br>
+Durante o processo de conexão do Databricks ao AWS S3, percebi que não seria seguro deixar as chaves de acesso expostas no código, já que qualquer usuário poderia visualizá-las.
+<br>
+Pensando em boas práticas e segurança, esta etapa inicial foi dedicada à configuração do ambiente, incluindo a criação de um arquivo
+`aws_credentials.json`, que permite a conexão com a AWS de forma segura e controlada.
+
+
+### 1.A - Configuração das chaves de acesso | [00-Configuracao 📎](notebooks/00-Configuracao.ipynb)
 - Criação da conta na AWS
 - Criação do bucket S3 com as camadas bronze, silver e gold
 - Criação de credenciais IAM e geração das chaves de acesso
@@ -68,7 +77,7 @@ O projeto foi construído de forma sequencial, seguindo boas práticas de engenh
 
 <br></br>
 
-### 2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados no Metastore do Databricks Bronze📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
+### 2. 🥉 Catálogo da Camada Bronze | [01-Catalogo de Dados no Metastore do Databricks Bronze📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
 
 Esta etapa teve como objetivo principal visualizar e documentar todas as colunas disponíveis nos arquivos brutos, a fim de entender a estrutura dos dados recebidos e decidir quais colunas seriam aproveitadas nas próximas etapas do pipeline.
 
@@ -138,4 +147,12 @@ Este notebook é responsável por registrar no Metastore as tabelas já tratadas
 - Registro das tabelas da camada Silver no Metastore com o caminho no S3
 - Tabelas disponíveis para consulta direta com spark.sql("SELECT * FROM ...")
 
+
+### 5. 🥇 Transformação para a Camada Gold - Mart de Clubes | 04A-Transformacao-Gold-Mart-Clubes
+
+Nessa etapa damos início à construção do **Data Warehouse** do projeto, criando nossas tabelas da **camada Gold**.
+O foco aqui é consolidar os dados tratados na camada Silver em uma estrutura otimizada para consumo analítico, utilizando métricas agregadas, normalizações e criação de scores personalizados.
+
+Principais etapas desenvolvidas:
+...
 
