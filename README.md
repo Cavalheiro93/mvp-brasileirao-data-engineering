@@ -113,11 +113,17 @@ Em seguida, iniciamos o processo de catalogação para entender a estrutura dos 
 <br></br>
 
 
-### 3. 📙 Limpeza e Tratamento dos Dados
+## 3. Processamento da Camada Silver: Limpeza, Transformação e Catalogação dos Dados 🧹🥈
+Após a extração e armazenamento dos dados brutos na camada Bronze, esta etapa é dedicada à preparação dos dados para consumo analítico.
+<br>
+Realizamos a limpeza, padronização e transformação de cada uma das tabelas originais, tratando problemas como colunas irrelevantes, formatações inconsistentes e divergências nas datas das partidas.
+<br>
+Ao final do processo, os dados tratados são armazenados na camada Silver do Data Lake no formato Delta e Parquet e, em seguida, registrados no Metastore do Databricks com o caminho S3, possibilitando consultas diretas via SQL.
+#### 3.A - Dados Transformados e armazenados em Parquet e Delta na camada Silver no AWS S3 | [Arquivos da camada Bronze](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/bronze)
+![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-silver-pastas-parquet-delta.jpg)
 
 
 #### 3A. Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
-Este notebook realiza a leitura dos dados de partidas diretamente da camada Bronze, aplicando diversas transformações para prepará-los para a camada Silver.
 - Leitura do arquivo `BrasilSerieA_2024_TodasPartidas.csv` na Bronze
 - Remoção de colunas irrelevantes (ex: colunas com odds de apostas)
 - Filtro para considerar apenas partidas da temporada **2024**
@@ -130,9 +136,6 @@ Este notebook realiza a leitura dos dados de partidas diretamente da camada Bron
 
 
 #### 3B. Ingestão Bronze - Classificação Final | [02B-Ingestao-Bronze-Classificacao📎](notebooks/02B-Ingestao-Bronze-Classificacao.ipynb)
-
-Este notebook realiza o tratamento da tabela de classificação dos clubes, transformando os dados brutos da Bronze em um formato estruturado para análise na camada Silver.
-
 - Leitura do arquivo `BrasilSerieA_2024_ClassificacaoFinal.csv` na Bronze
 - Renomeação de colunas para padronização
 - Criação de um dicionário de clubes, para padronizar os nomes
@@ -140,9 +143,6 @@ Este notebook realiza o tratamento da tabela de classificação dos clubes, tran
 
 
 #### 3C. Ingestão Bronze - Estatísticas por Jogador e Partida | [02C-Ingestao-Bronze-EstatisticaJogadorPorPartida📎](notebooks/02C-Ingestao-Bronze-EstatisticaJogadorPorPartida.ipynb)
-
-Este notebook trata os dados estatísticos dos jogadores por partida, realizando ajustes essenciais antes de armazená-los na camada Silver.
-
 - Leitura do arquivo `BrasilSerieA_2024_EstatisticaJogadorPorPartida.csv` na Bronze
 - Remoção de colunas irrelevantes ou redundantes
 - Renomeação de colunas para padronização
@@ -153,20 +153,13 @@ Este notebook trata os dados estatísticos dos jogadores por partida, realizando
 
 
 #### 3D. Correção de Datas e Partidas Ausentes | [02D-Correcao-Datas-e-Partidas-Ausentes📎](notebooks/02D-Correcao-Datas-e-Partidas-Ausentes.ipynb)
-
-Este notebook realiza correções importantes nos dados da tabela de estatísticas dos jogadores, garantindo integridade e consistência antes de seguirmos para análises na camada Silver.
-
 - Identificação de divergências entre datas de partidas nos arquivos de estatísticas e todas as partidas
 - Encontrado um padrão, onde as datas diferentes das partidas são de -1 dia
 - Correção das datas incorretas com base no dataset validado (fbref.com)
 - Salvamento do DataFrame final corrigido na camada Silver no formato Parquet
 
-<br></br>
 
-### 4. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%de%Dados.ipynb)
-
-Este notebook é responsável por registrar no Metastore as tabelas já tratadas da camada Silver, possibilitando o consumo via SQL e outras ferramentas.
-
+#### 3E. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%de%Dados.ipynb)
 - Criação do Database específico para os dados tratados (camada Silver)
 - Conversão dos arquivos tratados de .parquet para o formato Delta
 - Registro das tabelas da camada Silver no Metastore com o caminho no S3
