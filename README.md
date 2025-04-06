@@ -31,11 +31,13 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 │   ├── 📂 bronze/          → Dados brutos, exatamente como foram recebidos (raw)
 │   ├── 📂 silver/          → Dados tratados, limpos e padronizados
 │   └── 📂 gold/            → Dados modelados prontos para análise e consumo (Data Marts)
-
+|
 ├── 📁 notebooks/           → Notebooks com cada etapa do pipeline de dados
-│   └── 00-Configuracao     → Notebook de configuração de ambiente e credenciais
-
+|
 ├── 📁 images/              → Diagramas, capturas de tela e elementos visuais do projeto
+│   ├── 📂 icons/           → Icones personalizados para o README do GitHub
+│   ├── 📂 AWS-S3/          → Imagens referente ao S3, para auxiliar no entendimento do processo
+|
 ├── README.md              → Documentação geral do projeto
 └── placeholder.txt        → Arquivo temporário para inicializar o repositório
 ```
@@ -44,9 +46,19 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 <br></br>
 ## 📒 Notebooks do Projeto
 
-| Ordem | Nome do Notebook         | Descrição                                                       | Link
-|-------|--------------------------|-----------------------------------------------------------------|-------|
-| 00    | `00-Configuracao.ipynb`  | Leitura das credenciais, configuração do S3 e testes de conexão |[🔗](notebooks/00-Configuracao.ipynb)
+| Ordem | Nome do Notebook                                | Descrição                                                                                      | Link |
+|-------|------------------------------------------       |------------------------------------------------------------------------------------------------|------|
+| 00    | `00-Configuracao.ipynb`                         | Leitura das credenciais, configuração do S3 e testes de conexão                                | [🔗](notebooks/00-Configuracao.ipynb) |
+| 01    | `01-Catalogo-Bronze.ipynb`                      | Criação do catálogo no Metastore com os dados brutos da camada Bronze                          | [🔗](notebooks/01-Catalogo-Bronze.ipynb) |
+| 02A   | `02A-Ingestao-Bronze-TodasPartidas.ipynb`       | Leitura e tratamento inicial do arquivo de partidas (ajuste de datas, nomes e tipos)           | [🔗](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb) |
+| 02B   | `02B-Ingestao-Bronze-Estatisticas.ipynb`        | Leitura e tratamento das estatísticas por jogador; limpeza e padronização de colunas           | [🔗](notebooks/02B-Ingestao-Bronze-Estatisticas.ipynb) |
+| 02C   | `02C-Ingestao-Bronze-Classificacao.ipynb`       | Leitura da classificação final dos clubes, ajustes e criação da tabela na camada Silver        | [🔗](notebooks/02C-Ingestao-Bronze-Classificacao.ipynb) |
+| 02D   | `02D-Correcao-Datas-e-Partidas-Ausentes.ipynb`  | Correções manuais em datas e partidas ausentes nas estatísticas do campeonato            | [🔗](notebooks/02D-Correcao-Datas-e-Partidas-Ausentes.ipynb) |
+| 03    | `03-Catalogo-Silver.ipynb`                      | Registro das tabelas tratadas da camada Silver no Metastore (com caminho S3)                   | [🔗](notebooks/03-Catalogo-Silver.ipynb) |
+| 04A   | `04A-Transformacao-Gold-Mart-Clubes.ipynb`      | Agregações, normalizações e criação do Mart com desempenho dos clubes na camada Gold          | [🔗](notebooks/04A-Transformacao-Gold-Mart-Clubes.ipynb) |
+| 04B   | `04B-Transformacao-Gold-Mart-Jogadores.ipynb`   | Criação do Mart com desempenho individual dos jogadores e informações complementares       | [🔗](notebooks/04B-Transformacao-Gold-Mart-Jogadores.ipynb) |
+| 05    | `05-Carga-Redshift.ipynb`                       | Criação do Namespace e Workgroup no Redshift Serverless, além da carga das tabelas Gold        | [🔗](notebooks/05-Carga-Redshift.ipynb) |
+
 
 
 ### 📌 Observações
