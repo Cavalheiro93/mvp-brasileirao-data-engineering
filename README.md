@@ -161,7 +161,7 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 - Armazenamento do DataFrame final corrigido na camada Silver no formato Parquet
 
 
-#### 3F. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Silver.ipynb)
+#### 3F. Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Silver.ipynb)
 - Criação do Database específico para os dados tratados (camada Silver)
 - Conversão dos arquivos tratados de .parquet para o formato Delta
 - Registro das tabelas da camada Silver no Metastore com o caminho no S3
@@ -178,19 +178,30 @@ A Camada Gold será responsável por organizar os dados de forma otimizada para 
 O Catálogo de dados da Camada Gold foram registrados no **Metastore do Databricks** com caminho no S3, permitindo consultas SQL e integração com ferramentas analíticas.
 ![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-gold-pastas-arquivos-finais.jpg)
 
-4A - Transformação por Clube | [04A-Transformacao-Gold-Mart-Clubes](notebooks/04A-Transformacao-Gold-Mart-Clubes.ipynb)  
+#### 4A. Transformação por Clube | [04A-Transformacao-Gold-Mart-Clubes](notebooks/04A-Transformacao-Gold-Mart-Clubes.ipynb)  
 - Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
 - Criação de Views Temporárias
 - Criação de métricas de normalização
 - Criando pesos para cada uma dessas métricas
 - Criando um Score beseado na soma dessas métricas de normalização, para o resultado final do desempenho do clube
-4B - Transformação por Jogador | [04B-Transformacao-Gold-Mart-Jogadores](notebooks/04B-Transformacao-Gold-Mart-Jogadores.ipynb)
+
+
+#### 4B. Transformação por Jogador | [04B-Transformacao-Gold-Mart-Jogadores](notebooks/04B-Transformacao-Gold-Mart-Jogadores.ipynb)
 - Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
 - Criação de Views Temporárias
 - Criação de métricas de normalização
 - Criando pesos para cada uma dessas métricas
 - Criando um Score beseado na soma dessas métricas de normalização, para o resultado final do desempenho do Jogador
-4C - Informações Complementares dos Jogadores | [04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb](notebooks/04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb)
-- 
-4D - Registro no Metastore | [05-Catalogo de Dados no Metastore do Databricks Gold](notebooks/05-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Gold.ipynb)
 
+
+#### 4C. Informações Complementares dos Jogadores | [04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb](notebooks/04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb)
+- Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
+- Mapeamento das posições dos Jogadores em cada partida
+- Ranqueamento das duas posições mais jogadas por cada jogador
+- Criação de colunas de Posição Principal e Improvisação
+
+#### 4D. Catálogo da Camada Gold | [05-Catalogo de Dados no Metastore do Databricks Gold](notebooks/05-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Gold.ipynb)
+- Criação do Database específico para os dados tratados (camada Gold)
+- Registro das tabelas da camada Gold no Metastore com o caminho no S3
+- Adição de atributos informativos: valores mínimos e máximos, total de registros, registros nulos e registros distintos
+- Detalhamento da fonte dos dados: link da origem, nome do arquivo original e nome utilizado no Databricks/S3
