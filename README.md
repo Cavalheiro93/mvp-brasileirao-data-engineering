@@ -119,11 +119,13 @@ Após a extração e armazenamento dos dados brutos na camada Bronze, esta etapa
 Realizamos a limpeza, padronização e transformação de cada uma das tabelas originais, tratando problemas como colunas irrelevantes, formatações inconsistentes e divergências nas datas das partidas.
 <br>
 Ao final do processo, os dados tratados são armazenados na camada Silver do Data Lake no formato Delta e Parquet e, em seguida, registrados no Metastore do Databricks com o caminho S3, possibilitando consultas diretas via SQL.
+
+
 #### 3.A - Dados Transformados e armazenados em Parquet e Delta na camada Silver no AWS S3 | [Arquivos da camada Silver](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/silver)
 ![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-silver-pastas-parquet-delta.jpg)
 
 
-#### 3A. Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
+#### 3B. Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
 - Leitura do arquivo `BrasilSerieA_2024_TodasPartidas.csv` na Bronze
 - Remoção de colunas irrelevantes (ex: colunas com odds de apostas)
 - Filtragem da temporada **2024** apenas.
@@ -135,14 +137,14 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 - Armazenamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
-#### 3B. Ingestão Bronze - Classificação Final | [02B-Ingestao-Bronze-Classificacao📎](notebooks/02B-Ingestao-Bronze-Classificacao.ipynb)
+#### 3C. Ingestão Bronze - Classificação Final | [02B-Ingestao-Bronze-Classificacao📎](notebooks/02B-Ingestao-Bronze-Classificacao.ipynb)
 - Leitura do arquivo `BrasilSerieA_2024_ClassificacaoFinal.csv` na Bronze
 - Renomeação de colunas para padronização
 - Criação de um dicionário de clubes, para padronizar os nomes
 - Armazenamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
-#### 3C. Ingestão Bronze - Estatísticas por Jogador e Partida | [02C-Ingestao-Bronze-EstatisticaJogadorPorPartida📎](notebooks/02C-Ingestao-Bronze-EstatisticaJogadorPorPartida.ipynb)
+#### 3D. Ingestão Bronze - Estatísticas por Jogador e Partida | [02C-Ingestao-Bronze-EstatisticaJogadorPorPartida📎](notebooks/02C-Ingestao-Bronze-EstatisticaJogadorPorPartida.ipynb)
 - Leitura do arquivo `BrasilSerieA_2024_EstatisticaJogadorPorPartida.csv` na Bronze
 - Remoção de colunas irrelevantes ou redundantes
 - Renomeação de colunas para padronização
@@ -152,14 +154,14 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 - Armazenamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
-#### 3D. Correção de Datas e Partidas Ausentes | [02D-Correcao-Datas-e-Partidas-Ausentes📎](notebooks/02D-Correcao-Datas-e-Partidas-Ausentes.ipynb)
+#### 3E. Correção de Datas e Partidas Ausentes | [02D-Correcao-Datas-e-Partidas-Ausentes📎](notebooks/02D-Correcao-Datas-e-Partidas-Ausentes.ipynb)
 - Identificação de divergências entre datas de partidas nos arquivos de estatísticas e todas as partidas
 - Identificação do padrão onde as datas diferentes das partidas são de -1 dia
 - Correção das datas incorretas com base no dataset validado (fbref.com)
 - Armazenamento do DataFrame final corrigido na camada Silver no formato Parquet
 
 
-#### 3E. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Silver.ipynb)
+#### 3F. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Silver.ipynb)
 - Criação do Database específico para os dados tratados (camada Silver)
 - Conversão dos arquivos tratados de .parquet para o formato Delta
 - Registro das tabelas da camada Silver no Metastore com o caminho no S3
