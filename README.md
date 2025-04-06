@@ -49,7 +49,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 | Ordem | Nome do Notebook                                | Descrição                                                                                      | Link |
 |-------|------------------------------------------       |------------------------------------------------------------------------------------------------|------|
 | 00    | `00-Configuracao.ipynb`                         | Leitura das credenciais, configuração do S3 e testes de conexão                                | [🔗](notebooks/00-Configuracao.ipynb) |
-| 01    | `01-Catalogo-Bronze.ipynb`                      | Criação do catálogo no Metastore com os dados brutos da camada Bronze                          | [🔗](notebooks/01-Catalogo%de%Dados%no%Metastore%do%Databricks%Bronze.ipynb) |
+| 01    | `01-Catalogo-Bronze.ipynb`                      | Criação do catálogo no Metastore com os dados brutos da camada Bronze                          | [🔗](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb) |
 | 02A   | `02A-Ingestao-Bronze-TodasPartidas.ipynb`       | Leitura e tratamento inicial do arquivo de partidas (ajuste de datas, nomes e tipos)           | [🔗](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb) |
 | 02B   | `02B-Ingestao-Bronze-Estatisticas.ipynb`        | Leitura e tratamento das estatísticas por jogador; limpeza e padronização de colunas           | [🔗](notebooks/02B-Ingestao-Bronze-Estatisticas.ipynb) |
 | 02C   | `02C-Ingestao-Bronze-Classificacao.ipynb`       | Leitura da classificação final dos clubes, ajustes e criação da tabela na camada Silver        | [🔗](notebooks/02C-Ingestao-Bronze-Classificacao.ipynb) |
