@@ -14,8 +14,9 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - [📊 Perguntas e Respostas do Projeto](#-perguntas-e-respostas-do-projeto)
 
 
-
 <br></br>
+
+
 ## 🚀 Tecnologias Utilizadas
 
 - **Databricks Community Edition**: para ingestão, transformação e tratamento dos dados com PySpark (ETL)
@@ -26,6 +27,15 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 
 
 <br></br>
+
+
+## 🔄 Pipeline do Projeto
+![Visualização da Camada Bronze no S3](images/pipeline/pipeline-dados.jpg)
+
+
+<br></br>
+
+
 ## 📁 Estrutura de Pastas
 
 ```plaintext
