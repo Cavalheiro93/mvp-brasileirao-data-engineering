@@ -88,7 +88,7 @@ Nesta etapa realizamos a extração dos dados brutos (raw) da fonte original (`K
 <br>
 Em seguida, catálogamos esses dados a fim de entender a estrutura dos dados recebidos e decidir quais colunas seriam aproveitadas nas próximas etapas do pipeline.
 
-#### 2.A - Extração dos Dados e armazenamento no AWS S3 |  [Arquivos da camada Bronze]([https://github.com/SEU-USUARIO/SEU-REPO/data/bronze](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/bronze))
+#### 2.A - Extração dos Dados e armazenamento no AWS S3 |  [Arquivos da camada Bronze](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/bronze)
 
 ![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-bronze-arquivos-raw.jpg)
 
