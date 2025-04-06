@@ -73,7 +73,7 @@ Pensando em boas práticas e segurança, esta etapa inicial foi dedicada à conf
 `aws_credentials.json`, que permite a conexão com a AWS de forma segura e controlada.
 
 
-### 1.A - Configuração das chaves de acesso | [00-Configuracao 📎](notebooks/00-Configuracao.ipynb)
+#### 1.A - Configuração das chaves de acesso | [00-Configuracao 📎](notebooks/00-Configuracao.ipynb)
 - Criação da conta na AWS
 - Criação do bucket S3 com as camadas bronze, silver e gold
 - Criação de credenciais IAM e geração das chaves de acesso
@@ -82,11 +82,16 @@ Pensando em boas práticas e segurança, esta etapa inicial foi dedicada à conf
 
 <br></br>
 
-## 2. Extração dos Dados e Catalogação Inicial da camada Bronze
-Nesta etapa realizamos a extração dos dados brutos (raw) da fonte original (Kaggle) e armazenamento direto na camada Bronze do nosso Data Lake no S3.
+## 2. Extração dos Dados e Catalogação Inicial da camada Bronze 🥉
+Nesta etapa realizamos a extração dos dados brutos (raw) da fonte original (`Kaggle`) e armazenamento direto na camada Bronze do nosso Data Lake no S3 (`mvp-brasileirao-2024`).
+<br>
+Em seguida, catálogamos esses dados a fim de entender a estrutura dos dados recebidos e decidir quais colunas seriam aproveitadas nas próximas etapas do pipeline.
+
+#### 2.A - Extração dos Dados e armazenamento no AWS S3
+![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-bronze-arquivos-raw.jpg)
 
 
-### 2. 🥉 Catálogo da Camada Bronze | [01-Catalogo de Dados no Metastore do Databricks Bronze📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
+#### 2.B  Catálogo da Camada Bronze | [01-Catalogo de Dados no Metastore do Databricks Bronze📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
 
 Esta etapa teve como objetivo principal visualizar e documentar todas as colunas disponíveis nos arquivos brutos, a fim de entender a estrutura dos dados recebidos e decidir quais colunas seriam aproveitadas nas próximas etapas do pipeline.
 
