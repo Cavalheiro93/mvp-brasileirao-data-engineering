@@ -125,3 +125,15 @@ Este notebook realiza correções importantes nos dados da tabela de estatístic
 - Encontrado um padrão, onde as datas diferentes das partidas são de -1 dia
 - Correção das datas incorretas com base no dataset validado (fbref.com)
 - Salvamento do DataFrame final corrigido na camada Silver no formato Parquet
+
+<br></br>
+
+4. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados📎](notebooks/03-Catalogo%de%Dados.ipynb)
+Este notebook é responsável por registrar no Metastore as tabelas já tratadas da camada Silver, possibilitando o consumo via SQL e outras ferramentas.
+
+-Criação do Database específico para os dados tratados (camada Silver)
+-Conversão dos arquivos tratados de .parquet para o formato Delta
+-Registro das tabelas da camada Silver no Metastore com o caminho no S3
+-Tabelas disponíveis para consulta direta com spark.sql("SELECT * FROM ...")
+
+
