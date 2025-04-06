@@ -121,7 +121,7 @@ Realizamos a limpeza, padronização e transformação de cada uma das tabelas o
 Ao final do processo, os dados tratados são armazenados na camada Silver do Data Lake no formato Delta e Parquet e, em seguida, registrados no Metastore do Databricks com o caminho S3, possibilitando consultas diretas via SQL.
 
 
-#### 3.A - Dados Transformados e armazenados em Parquet e Delta na camada Silver no AWS S3 | [Arquivos da camada Silver](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/silver)
+#### 3.A - Transformação dos Dados e armazenamento no AWS S3 (Parquet e Delta) | [Arquivos da camada Silver](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/silver)
 ![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-silver-pastas-parquet-delta.jpg)
 
 
@@ -176,9 +176,11 @@ Nesta etapa, consolidamos os dados tratados da camada Silver e criamos as primei
 A Camada Gold será responsável por organizar os dados de forma otimizada para consumo analítico, através de **Data Marts** modelados por clube e por jogador, além de outras tabelas complementares.
 
 O Catálogo de dados da Camada Gold foram registrados no **Metastore do Databricks** com caminho no S3, permitindo consultas SQL e integração com ferramentas analíticas.
+
+#### 4A. Transformações Analíticas: Enriquecendo os dados da Silver para Gold e armazenamento no AWS S3 | [Arquivos da camada Gold](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/gold)
 ![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-gold-pastas-arquivos-finais.jpg)
 
-#### 4A. Transformação por Clube | [04A-Transformacao-Gold-Mart-Clubes](notebooks/04A-Transformacao-Gold-Mart-Clubes.ipynb)  
+#### 4B. Transformação por Clube | [04A-Transformacao-Gold-Mart-Clubes](notebooks/04A-Transformacao-Gold-Mart-Clubes.ipynb)  
 - Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
 - Criação de Views Temporárias
 - Criação de métricas de normalização
@@ -186,7 +188,7 @@ O Catálogo de dados da Camada Gold foram registrados no **Metastore do Databric
 - Criando um Score beseado na soma dessas métricas de normalização, para o resultado final do desempenho do clube
 
 
-#### 4B. Transformação por Jogador | [04B-Transformacao-Gold-Mart-Jogadores](notebooks/04B-Transformacao-Gold-Mart-Jogadores.ipynb)
+#### 4C. Transformação por Jogador | [04B-Transformacao-Gold-Mart-Jogadores](notebooks/04B-Transformacao-Gold-Mart-Jogadores.ipynb)
 - Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
 - Criação de Views Temporárias
 - Criação de métricas de normalização
@@ -194,13 +196,13 @@ O Catálogo de dados da Camada Gold foram registrados no **Metastore do Databric
 - Criando um Score beseado na soma dessas métricas de normalização, para o resultado final do desempenho do Jogador
 
 
-#### 4C. Informações Complementares dos Jogadores | [04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb](notebooks/04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb)
+#### 4D. Informações Complementares dos Jogadores | [04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb](notebooks/04C-Transformacao-Gold-Mart_Info_Jogadores.ipynb)
 - Leitura dos Arquivos no DBFS (Para diminuir o custo da AWS S3)
 - Mapeamento das posições dos Jogadores em cada partida
 - Ranqueamento das duas posições mais jogadas por cada jogador
 - Criação de colunas de Posição Principal e Improvisação
 
-#### 4D. Catálogo da Camada Gold | [05-Catalogo de Dados no Metastore do Databricks Gold](notebooks/05-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Gold.ipynb)
+#### 4E. Catálogo da Camada Gold | [05-Catalogo de Dados no Metastore do Databricks Gold](notebooks/05-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Gold.ipynb)
 - Criação do Database específico para os dados tratados (camada Gold)
 - Registro das tabelas da camada Gold no Metastore com o caminho no S3
 - Adição de atributos informativos: valores mínimos e máximos, total de registros, registros nulos e registros distintos
