@@ -68,7 +68,8 @@ O projeto foi construído de forma sequencial, seguindo boas práticas de engenh
 
 <br></br>
 
-### 2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
+### 2. 📗 Catálogo da Camada Bronze | [01-Catalogo de Dados no Metastore do Databricks Bronze📎](notebooks/01-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Bronze.ipynb)  
+
 Esta etapa teve como objetivo principal visualizar e documentar todas as colunas disponíveis nos arquivos brutos, a fim de entender a estrutura dos dados recebidos e decidir quais colunas seriam aproveitadas nas próximas etapas do pipeline.
 
 - Criação do catálogo no Metastore do Databricks com os dados brutos (raw) armazenados na camada Bronze
@@ -128,12 +129,13 @@ Este notebook realiza correções importantes nos dados da tabela de estatístic
 
 <br></br>
 
-4. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados📎](notebooks/03-Catalogo%de%Dados.ipynb)
+### 4. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%de%Dados.ipynb)
+
 Este notebook é responsável por registrar no Metastore as tabelas já tratadas da camada Silver, possibilitando o consumo via SQL e outras ferramentas.
 
--Criação do Database específico para os dados tratados (camada Silver)
--Conversão dos arquivos tratados de .parquet para o formato Delta
--Registro das tabelas da camada Silver no Metastore com o caminho no S3
--Tabelas disponíveis para consulta direta com spark.sql("SELECT * FROM ...")
+- Criação do Database específico para os dados tratados (camada Silver)
+- Conversão dos arquivos tratados de .parquet para o formato Delta
+- Registro das tabelas da camada Silver no Metastore com o caminho no S3
+- Tabelas disponíveis para consulta direta com spark.sql("SELECT * FROM ...")
 
 
