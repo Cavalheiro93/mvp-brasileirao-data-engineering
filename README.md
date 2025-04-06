@@ -8,6 +8,7 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 ## 📚 Sumário
 
 - [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [🔄 Pipeline do Projeto](#-pipeline-do-projeto)
 - [📁 Estrutura de Pastas](#-estrutura-de-pastas)
 - [📒 Notebooks do Projeto](#-notebooks-do-projeto)
 - [🧭 Etapas do Projeto](#-etapas-do-projeto)
