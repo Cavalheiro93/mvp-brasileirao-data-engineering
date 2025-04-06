@@ -309,7 +309,8 @@ Essa abordagem nos permitiu:
 <br></br>
 
 
-# 📊 Perguntas e Respostas do Projeto | 📓 [`06C-Respostas.ipynb`](notebooks/06C-Respostas.ipynb)
+# 📊 Perguntas e Respostas do Projeto
+## 📓 [`06C-Respostas.ipynb`](notebooks/06C-Respostas.ipynb)
 
 Para finalizar o pipeline, criamos um caderno com as respostas baseadas nas perguntas definidas no início do projeto.
 
