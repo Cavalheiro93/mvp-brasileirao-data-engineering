@@ -159,7 +159,7 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 - Salvamento do DataFrame final corrigido na camada Silver no formato Parquet
 
 
-#### 3E. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%de%Dados.ipynb)
+#### 3E. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Silver.ipynb)
 - Criação do Database específico para os dados tratados (camada Silver)
 - Conversão dos arquivos tratados de .parquet para o formato Delta
 - Registro das tabelas da camada Silver no Metastore com o caminho no S3
