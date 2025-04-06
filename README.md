@@ -6,8 +6,6 @@
   <img src="images/icons/spfc.jpg" width="75" />
   <img src="images/icons/brasileirao-2024.jpeg" width="134" />
   <img src="images/icons/spfc.jpg" width="75" />
-  <img src="images/icons/brasileirao-2024.jpeg" width="134" />
-  <img src="images/icons/spfc.jpg" width="75" />
 </p>
 
 # MVP - Engenharia de Dados | Análise do Desempenho do São Paulo no Brasileirão 2024 e Identificação de possíveis Reforços
