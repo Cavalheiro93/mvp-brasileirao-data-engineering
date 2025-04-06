@@ -1,4 +1,8 @@
-# ⚽🏆 MVP - Engenharia de Dados | Análise do Desempenho do São Paulo no Brasileirão 2024 e Identificação de Reforços
+<p align="center">
+  <img src="images/icons/spfc.jpg" width="80"/>
+</p>
+
+# MVP - Engenharia de Dados | Análise do Desempenho do São Paulo no Brasileirão 2024 e Identificação de Reforços
 
 ## 🎯 Objetivo do Projeto
 Este projeto tem como objetivo construir um pipeline completo de Engenharia de Dados usando ferramentas amplamente utilizadas no mercado, como AWS S3, Databricks e Amazon Redshift, com foco em dados reais do Campeonato Brasileiro Série A 2024.
