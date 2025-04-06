@@ -11,6 +11,8 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 - [📁 Estrutura de Pastas](#-estrutura-de-pastas)
 - [📒 Notebooks do Projeto](#-notebooks-do-projeto)
 - [🧭 Etapas do Projeto](#-etapas-do-projeto)
+- 📊 [Respostas Analíticas](#perguntas-e-respostas-do-projeto)
+
 
 
 <br></br>
@@ -68,11 +70,9 @@ O objetivo é construir um pipeline completo de Engenharia de Dados usando ferra
 ---
 
 
-
-
-
-
 <br></br>
+
+
 # 🧭 Etapas do Projeto
 
 
@@ -265,3 +265,7 @@ Essa abordagem nos permitiu:
 
 <br></br>
 
+
+# 📊 Perguntas e Respostas do Projeto
+
+aaaa
