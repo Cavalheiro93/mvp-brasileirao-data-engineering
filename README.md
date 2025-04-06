@@ -167,10 +167,7 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 - Registro das tabelas da camada Silver no Metastore com o caminho no S3
 
 
-### 4. 🥇 Transformação para a Camada Gold - Mart de Clubes | 04A-Transformacao-Gold-Mart-Clubes
 
-Nessa etapa damos início à construção do **Data Warehouse** do projeto, criando nossas tabelas da **camada Gold**.
-O foco aqui é consolidar os dados tratados na camada Silver em uma estrutura otimizada para consumo analítico, utilizando métricas agregadas, normalizações e criação de scores personalizados.
 
 
 
