@@ -119,7 +119,7 @@ Após a extração e armazenamento dos dados brutos na camada Bronze, esta etapa
 Realizamos a limpeza, padronização e transformação de cada uma das tabelas originais, tratando problemas como colunas irrelevantes, formatações inconsistentes e divergências nas datas das partidas.
 <br>
 Ao final do processo, os dados tratados são armazenados na camada Silver do Data Lake no formato Delta e Parquet e, em seguida, registrados no Metastore do Databricks com o caminho S3, possibilitando consultas diretas via SQL.
-#### 3.A - Dados Transformados e armazenados em Parquet e Delta na camada Silver no AWS S3 | [Arquivos da camada Bronze](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/bronze)
+#### 3.A - Dados Transformados e armazenados em Parquet e Delta na camada Silver no AWS S3 | [Arquivos da camada Silver](https://github.com/Cavalheiro93/mvp-brasileirao-data-engineering/tree/main/data/silver)
 ![Visualização da Camada Bronze no S3](images/AWS-S3/bucket-s3-camada-silver-pastas-parquet-delta.jpg)
 
 
