@@ -126,20 +126,20 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 #### 3A. Ingestão Bronze - Todas as Partidas | [02A-Ingestao-Bronze-TodasPartidas📎](notebooks/02A-Ingestao-Bronze-TodasPartidas.ipynb)  
 - Leitura do arquivo `BrasilSerieA_2024_TodasPartidas.csv` na Bronze
 - Remoção de colunas irrelevantes (ex: colunas com odds de apostas)
-- Filtro para considerar apenas partidas da temporada **2024**
+- Filtragem da temporada **2024** apenas.
 - Remoção de linhas duplicadas e com dados ausentes críticos
 - Criação das colunas:
   - `Match_ID`: identificador único da partida
   - `Trimestre`: com base na data da partida
   - `Turno`: para indicar se é 1º ou 2º turno do campeonato
-- Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
+- Armazenamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
 #### 3B. Ingestão Bronze - Classificação Final | [02B-Ingestao-Bronze-Classificacao📎](notebooks/02B-Ingestao-Bronze-Classificacao.ipynb)
 - Leitura do arquivo `BrasilSerieA_2024_ClassificacaoFinal.csv` na Bronze
 - Renomeação de colunas para padronização
 - Criação de um dicionário de clubes, para padronizar os nomes
-- Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
+- Armazenamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
 #### 3C. Ingestão Bronze - Estatísticas por Jogador e Partida | [02C-Ingestao-Bronze-EstatisticaJogadorPorPartida📎](notebooks/02C-Ingestao-Bronze-EstatisticaJogadorPorPartida.ipynb)
@@ -148,22 +148,21 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 - Renomeação de colunas para padronização
 - Criação de um dicionário de clubes, para padronizar os nomes
 - Correção no Tipo de Dado de algumas colunas
-- ⚠️ Ajustes na base de dados por falta de informação
-- Salvamento do DataFrame tratado na **camada Silver** no formato Parquet
+- ⚠️ Ajuste na base de dados por falta de informação
+- Armazenamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
 #### 3D. Correção de Datas e Partidas Ausentes | [02D-Correcao-Datas-e-Partidas-Ausentes📎](notebooks/02D-Correcao-Datas-e-Partidas-Ausentes.ipynb)
 - Identificação de divergências entre datas de partidas nos arquivos de estatísticas e todas as partidas
-- Encontrado um padrão, onde as datas diferentes das partidas são de -1 dia
+- Identificação do padrão onde as datas diferentes das partidas são de -1 dia
 - Correção das datas incorretas com base no dataset validado (fbref.com)
-- Salvamento do DataFrame final corrigido na camada Silver no formato Parquet
+- Armazenamento do DataFrame final corrigido na camada Silver no formato Parquet
 
 
 #### 3E. 🗂️ Catálogo da Camada Silver | [03-Catalogo de Dados no Metastore do Databricks Silver📎](notebooks/03-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Silver.ipynb)
 - Criação do Database específico para os dados tratados (camada Silver)
 - Conversão dos arquivos tratados de .parquet para o formato Delta
 - Registro das tabelas da camada Silver no Metastore com o caminho no S3
-- Tabelas disponíveis para consulta direta com spark.sql("SELECT * FROM ...")
 
 
 ### 5. 🥇 Transformação para a Camada Gold - Mart de Clubes | 04A-Transformacao-Gold-Mart-Clubes
