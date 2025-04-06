@@ -1,8 +1,21 @@
-# ⚽ MVP - Engenharia de Dados com Databricks, AWS e Redshift
+# ⚽🏆 MVP - Engenharia de Dados | Análise do Desempenho do São Paulo no Brasileirão 2024 e Identificação de Reforços
 
-Este projeto foi desenvolvido como parte da Pós-Graduação em Data Science e Analytics da PUC-Rio.  
-O objetivo é construir um pipeline completo de Engenharia de Dados usando ferramentas do mercado, com foco em dados reais do Campeonato Brasileiro Série A 2024.
+## 🎯 Objetivo do Projeto
+Este projeto tem como objetivo construir um pipeline completo de Engenharia de Dados usando ferramentas amplamente utilizadas no mercado, como AWS S3, Databricks e Amazon Redshift, com foco em dados reais do Campeonato Brasileiro Série A 2024.
 
+A proposta é resolver, de forma estruturada, o seguinte problema de negócio:
+
+> ### "Quais são os principais pontos fortes e fracos do desempenho do São Paulo FC ao longo da temporada, e quais reforços estatisticamente fariam sentido para a próxima temporada?"
+
+Para isso, o projeto foi dividido em etapas claras, que envolvem:
+
+- A coleta de dados públicos no Kaggle;
+- A organização dos dados em um Data Lake (camadas Bronze, Silver e Gold);
+- A modelagem de Data Marts por clube e por jogador;
+- O carregamento para um Data Warehouse na nuvem (Amazon Redshift);
+- E a análise final com base nas perguntas de negócio definidas no início.
+
+Além de responder às perguntas, o projeto busca aplicar boas práticas de organização, versionamento, documentação e uso de ferramentas modernas em um fluxo completo de ETL com PySpark, entregando um produto final reutilizável, didático e voltado para portfólio profissional.
 
 <br></br>
 ## 📚 Sumário
