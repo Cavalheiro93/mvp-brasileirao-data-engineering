@@ -202,6 +202,64 @@ O Catálogo de dados da Camada Gold foram registrados no **Metastore do Databric
 - Ranqueamento das duas posições mais jogadas por cada jogador
 - Criação de colunas de Posição Principal e Improvisação
 
+
+<br></br>
+
+
+## 5. Carregamento no Redshift e Análises Finais 📌
+Para consolidar os dados da camada Gold em um ambiente de Data Warehouse, utilizamos o **Amazon Redshift Serverless** integrado ao **Databricks**. 
+
+Abaixo, está resumidamente como foi feita a criação e configuração do ambiente:
+### 🔧 Criação do **Workgroup e Namespace** no Redshift Serverless
+![Workgroup e Namespace](images/AWS-Redshift/redshift-namespace-workgroup.jpg)
+
+### 🌐 Habilitação de Acesso Público no Redshift Serverless
+![Workgroup e Namespace](images/AWS-Redshift/redshift-acesso-publico.jpg)
+
+### 🔓 Liberação da Porta 5439 no Grupo de Segurança (VPC)
+![Workgroup e Namespace](images/AWS-Redshift/redshift-liberacao-porta-5439.jpg)
+
+### 📦 Instalação do **Driver JDBC no Databricks**, com upload do `.jar` e reinicialização do cluster
+![Workgroup e Namespace](images/AWS-Redshift/redshift-instalacao-driver-jdbc.jpg)
+
+
+
+Em seguida, a conexão do Databricks com o Redshift para análises SQL diretamente dentro do próprio Databricks.
+
+Apesar das análises poderem ser feitas diretamente no Redshift, optamos por manter o ambiente de exploração dentro do Databricks, como forma de aprendizado e controle do fluxo de ida e volta dos dados entre as plataformas.
+
+Essa abordagem nos permitiu:
+
+- Consolidar os dados no Redshift como **Data Warehouse final**
+- Aprender como fazer a **conexão JDBC** entre Databricks e Redshift
+- Validar como fazer a **leitura e consulta das tabelas Redshift** dentro do Databricks
+- Centralizar as análises e respostas no ambiente de notebooks
+
+---
+
+### 5A. Carregamento das Tabelas no Redshift  
+📓 [`06A-Carregamento-DW-Redshift-com-Databricks.ipynb`](notebooks/06A-Carregamento-DW-Redshift-com-Databricks.ipynb)  
+- Leitura dos arquivos `.parquet` da camada Gold diretamente do S3  
+- Escrita das tabelas analíticas (`mart_desempenho_clubes`, `mart_desempenho_jogadores`, `mart_info_jogadores`) no Redshift via JDBC  
+- Validação da carga usando o Query Editor v2
+
+---
+
+### 5B. Conexão entre Databricks e Redshift  
+📓 [`06B-Conexao-Databricks-com-DW-Redshift.ipynb`](notebooks/06B-Conexao-Databricks-com-DW-Redshift.ipynb)  
+- Estabelecimento de conexão JDBC para leitura das tabelas já carregadas no Redshift  
+- Leitura das tabelas do Redshift dentro do Databricks usando `spark.read.jdbc()`  
+- Confirmação da estrutura dos dados e visualização via PySpark
+
+---
+
+### 5C. Perguntas e Respostas Analíticas  
+📓 [`06C-Respostas.ipynb`](notebooks/06C-Respostas.ipynb)  
+- Respostas detalhadas às perguntas de negócio definidas no início do projeto  
+- Consultas SQL sobre as tabelas Redshift acessadas via Spark  
+- Geração de insights com base nos dados modelados e transformados durante o projeto
+
+
 #### 4E. Catálogo da Camada Gold | [05-Catalogo de Dados no Metastore do Databricks Gold](notebooks/05-Catalogo%20de%20Dados%20no%20Metastore%20do%20Databricks%20Gold.ipynb)
 - Criação do Database específico para os dados tratados (camada Gold)
 - Registro das tabelas da camada Gold no Metastore com o caminho no S3
