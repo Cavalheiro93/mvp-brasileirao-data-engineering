@@ -156,7 +156,7 @@ Em seguida, iniciamos o processo de catalogação para entender a estrutura dos 
 <br></br>
 
 
-## 3. Processamento da Camada Silver: Limpeza, Transformação e Catalogação dos Dados 🧹🥈
+## 3. Processamento da Camada Silver: Limpeza, Transformação e Catalogação 🧹🥈
 Após a extração e armazenamento dos dados brutos na camada Bronze, esta etapa é dedicada à preparação dos dados para consumo analítico.
 <br>
 Realizamos a limpeza, padronização e transformação de cada uma das tabelas originais, tratando problemas como colunas irrelevantes, formatações inconsistentes e divergências nas datas das partidas.
