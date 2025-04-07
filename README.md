@@ -193,7 +193,11 @@ Ao final do processo, os dados tratados são armazenados na camada Silver do Dat
 - Renomeação de colunas para padronização
 - Criação de um dicionário de clubes, para padronizar os nomes
 - Correção no Tipo de Dado de algumas colunas
-- ⚠️ Ajuste na base de dados por falta de informação
+- ⚠️ Idade do Jogador 'Felipe Vieira' (Fluminense) estava vazia, e portanto foi ajustada manualmente baseando-se no site https://www.ogol.com.br/jogador/felipe-andrade/620537?epoca_id=153
+- ⚠️ Input manual das Partidas que estavam pendentes no arquivo original:
+  - Fluminense x Grêmio (01/11/2024), informações baseada no site: https://fbref.com/pt/partidas/bb1a4828/Fluminense-Gremio-2024Novembro1-Serie-A
+  - Atlético-MG x Athletico-PR (07/12/2024), informações baseada no site: https://fbref.com/pt/partidas/fd4de3a4/Atletico-Mineiro-Athletico-Paranaense-2024Dezembro8-Serie-A
+  - Input foi feito através do arquivo `BrasilSerieA_2024_EstatisticaJogador_InputManual.csv`
 - Armazenamento do DataFrame tratado na **camada Silver** no formato Parquet
 
 
