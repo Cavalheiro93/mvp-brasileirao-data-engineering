@@ -290,7 +290,8 @@ Abaixo, está resumidamente como foi feita a criação e configuração do ambie
 <br></br>
 
 
-## 6. Integração Redshift + Databricks para Análises Finais
+## 6. Integração Redshift + Databricks para Análises Finais <img src="images/icons/databricks.jpg" alt="databricks" width="40" style="vertical-align: middle;"/> <img src="images/icons/redshift.jpg" alt="redshift" width="40" style="vertical-align: middle;"/>
+
 Apesar das análises poderem ser feitas diretamente no Redshift, optamos por manter o ambiente de exploração dentro do Databricks, como forma de aprendizado e controle do fluxo de ida e volta dos dados entre as plataformas.
 
 Essa abordagem nos permitiu:
