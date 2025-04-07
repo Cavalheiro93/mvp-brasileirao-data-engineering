@@ -260,7 +260,7 @@ O Catálogo de dados da Camada Gold foram registrados no **Metastore do Databric
 <br></br>
 
 
-## 5. Integração com Redshift: Carregamento e Validação Final 📌
+## 5. Integração com Redshift: Carregamento e Validação Final 📥 <img src="images/icons/redshift.jpg" alt="redshift" width="20" style="vertical-align: middle;"/>
 Para consolidar os dados da camada Gold em um ambiente de Data Warehouse, utilizamos o **Amazon Redshift Serverless** integrado ao **Databricks**. 
 
 Abaixo, está resumidamente como foi feita a criação e configuração do ambiente:
@@ -290,7 +290,7 @@ Abaixo, está resumidamente como foi feita a criação e configuração do ambie
 <br></br>
 
 
-## 6. Integração Redshift + Databricks para Análises Finais <img src="images/icons/databricks.jpg" alt="databricks" width="40" style="vertical-align: middle;"/> <img src="images/icons/redshift.jpg" alt="redshift" width="40" style="vertical-align: middle;"/>
+## 6. Integração Redshift + Databricks para Análises Finais <img src="images/icons/databricks.jpg" alt="databricks" width="30" style="vertical-align: middle;"/> <img src="images/icons/redshift.jpg" alt="redshift" width="20" style="vertical-align: middle;"/>
 
 Apesar das análises poderem ser feitas diretamente no Redshift, optamos por manter o ambiente de exploração dentro do Databricks, como forma de aprendizado e controle do fluxo de ida e volta dos dados entre as plataformas.
 
