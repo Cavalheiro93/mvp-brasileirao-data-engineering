@@ -36,7 +36,7 @@ Além de responder às perguntas, o projeto busca aplicar boas práticas de orga
 - [📒 Notebooks do Projeto](#-notebooks-do-projeto)
 - [🧭 Etapas do Projeto](#-etapas-do-projeto)
 - [📊 Perguntas e Respostas do Projeto](#-perguntas-e-respostas-do-projeto)
-- [✍️ Autoavaliacao](#-autoavaliacao)
+- [✍️ Autoavaliacao](#%EF%B8%8F-autoavaliação)
 
 
 
