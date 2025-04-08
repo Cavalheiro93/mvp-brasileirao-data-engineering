@@ -36,6 +36,8 @@ Além de responder às perguntas, o projeto busca aplicar boas práticas de orga
 - [📒 Notebooks do Projeto](#-notebooks-do-projeto)
 - [🧭 Etapas do Projeto](#-etapas-do-projeto)
 - [📊 Perguntas e Respostas do Projeto](#-perguntas-e-respostas-do-projeto)
+- [✍️ Autoavaliacao](#autoavaliacao)
+
 
 
 <br></br>
@@ -338,4 +340,16 @@ Essa etapa utilizou consultas **SQL com Spark** diretamente sobre as tabelas arm
 Algumas respostas foram complementadas com gráficos utilizando o matplotlib, trazendo mais clareza e facilitando a contextualização dos dados analisados.
 
 
+<br></br>
 
+
+# ✍️ Autoavaliação
+
+
+Acredito que atingi a maior parte dos objetivos propostos no início do projeto. Apesar de algumas limitações de dados — como a ausência de métricas específicas para goleiros —, consegui aplicar com sucesso os conhecimentos adquiridos e desenvolver um pipeline de ponta a ponta utilizando ferramentas que nunca havia usado na prática, como Databricks, Spark e AWS.
+
+O maior aprendizado foi perceber que, muitas vezes, é preciso adaptar a rota. Comecei com uma ideia mais ampla, de incluir também Atletas de fora do Brasil como sugestão de reforço, mas optei por focar em uma base mais enxuta e me aprofundar no domínio técnico, o que se mostrou pra mim a melhor decisão.
+
+O projeto representa bem meu momento como profissional em formação: me envolvi intensamente em todas as etapas, desde a definição do problema até a entrega final, buscando qualidade técnica e coerência nas decisões. 
+
+Estou muito satisfeito com o resultado e vejo esse projeto como um reflexo real da evolução que tive ao longo da pós-graduação.
