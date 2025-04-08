@@ -352,4 +352,4 @@ O maior aprendizado foi perceber que, muitas vezes, é preciso adaptar a rota. C
 
 O projeto representa bem meu momento como profissional em formação: me envolvi intensamente em todas as etapas, desde a definição do problema até a entrega final, buscando qualidade técnica e coerência nas decisões. 
 
-Estou muito satisfeito com o resultado e vejo esse projeto como um reflexo real da evolução que tive ao longo da pós-graduação.
+Estou muito satisfeito com o resultado e vejo esse projeto como um reflexo real da evolução que tive ao longo dessa Sprint de Engenharia de Dados.
