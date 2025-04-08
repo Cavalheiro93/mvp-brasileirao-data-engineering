@@ -78,7 +78,6 @@ Além de responder às perguntas, o projeto busca aplicar boas práticas de orga
 │   ├── 📂 pipeline/        → Imagem do Pipeline do Projeto
 |
 ├── README.md              → Documentação geral do projeto
-└── placeholder.txt        → Arquivo temporário para inicializar o repositório
 ```
 
 
