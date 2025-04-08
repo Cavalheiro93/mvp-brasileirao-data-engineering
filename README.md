@@ -106,8 +106,23 @@ Além de responder às perguntas, o projeto busca aplicar boas práticas de orga
 
 
 ### 📌 Observações
-> 🔐 **Credenciais AWS** não estão incluídas no repositório por segurança.  
-> O arquivo `aws_credentials.json` foi usado localmente para leitura via Spark no notebook `00-Configuracao`.
+
+🔐 **Credenciais AWS** não estão incluídas neste repositório por questões de segurança.
+
+Para que os Notebooks funcionem corretamente, é necessário criar localmente o arquivo `aws_credentials.json`, que será utilizado para autenticação com os serviços da AWS (como S3 e Redshift).
+
+Este arquivo deve estar salvo no caminho `dbfs:/FileStore/tables/aws_credentials.json` e conter a seguinte estrutura:
+
+```json
+[
+  {
+    "aws_access_key_id": "<sua-access-key-id>",
+    "aws_secret_access_key": "<sua-secret-access-key>",
+    "redshift_password": "<sua-senha-do-redshift>"
+  }
+]
+```
+
 
 ---
 
