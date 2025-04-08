@@ -15,7 +15,7 @@ Este projeto tem como objetivo construir um pipeline completo de Engenharia de D
 
 A proposta é resolver, de forma estruturada, o seguinte problema de negócio:
 
-> ### "Quais são os principais pontos fortes e fracos do desempenho do São Paulo FC ao longo da temporada, e quais reforços estatisticamente fariam sentido para a próxima temporada?"
+> ### "Identificar, com base em dados estatísticos, os setores de campo com melhor e pior desempenho do São Paulo FC na temporada 2024 e recomendar reforços para os setores mais carentes, comparando atletas de destaque em outros clubes com os titulares do elenco atual."
 
 Para isso, o projeto foi dividido em etapas claras, que envolvem:
 
