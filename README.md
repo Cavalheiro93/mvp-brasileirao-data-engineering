@@ -102,43 +102,43 @@ Tabela detalhada com estatísticas individuais por jogador em cada partida: pass
 ## 📁 Estrutura de Pastas
 
 ```plaintext
-├── 📁 data/                                                    → Contém os dados divididos por camadas do Data Lake
-│   ├── 📂 bronze/                                              → Dados brutos, exatamente como foram recebidos (raw)
-│   ├── 📂 silver/                                              → Dados tratados, limpos e padronizados
-│       ├── 📂 delta/                                           → Pasta de arquivos em formato Delta
-│           ├── 📂 brasil_seriea_2024_classificacao/            → Arquivo brasil_seriea_2024_classificacao em formato Delta
-│           ├── 📂 brasil_seriea_2024_estatistica_jogador/      → Arquivo brasil_seriea_2024_estatistica_jogador em formato Delta
-│           ├── 📂 brasil_seriea_2024_todas_partidas/           → Arquivo brasil_seriea_2024_todas_partidas em formato Delta
-│           ├── 📂 catalog_classificacao/                       → Catálogo da classificacao em formato Delta
-│           ├── 📂 catalog_estatistica_jogador/                 → Catálogo da estatística de jogadores em formato Delta
-│           ├── 📂 catalog_todas_partidas/                      → Catálogo das partidas em formato Delta
-│       ├── 📂 parquet/                                         → Pasta de arquivos em formato Parquet
-│           ├── 📂 brasil_seriea_2024_classificacao/            → Arquivo brasil_seriea_2024_classificacao em formato Parquet
-│           ├── 📂 brasil_seriea_2024_estatistica_jogador/      → Arquivo brasil_seriea_2024_estatistica_jogador em formato Parquet
-│           ├── 📂 brasil_seriea_2024_todas_partidas/           → Arquivo brasil_seriea_2024_todas_partidas em formato Parquet
-│   └── 📂 gold/                                                → Dados modelados prontos para análise e consumo (Data Marts)
-│           ├── 📂 Classificacao_Tier/                          → Tabela com a classificação dos clubes segmentada por tiers e médias de gols
-│           ├── 📂 Mart_Desempenho_Clubes/                      → Tabela com métricas de desempenho geral e defensivo/ofensivo/criação por clube
-│           ├── 📂 Mart_Desempenho_Jogadores/                   → Tabela com estatísticas agregadas de desempenho individual dos jogadores
-│           ├── 📂 Mart_Info_Jogadores/                         → Tabela com informações dos jogadores, posições e versatilidade tática
-│           ├── 📂 todas_partidas/                              → Tabela com o histórico completo de partidas da temporada
-│           ├── 📂 catalogo_de_dados/                           → Dicionário de dados contendo descrição e significado de cada coluna
+├── 📁 data/                                                         → Contém os dados divididos por camadas do Data Lake
+│   ├── 📂 bronze/                                                   → Dados brutos, exatamente como foram recebidos (raw)
+│   ├── 📂 silver/                                                   → Dados tratados, limpos e padronizados
+│       ├── 📂 delta/                                                → Pasta de arquivos em formato Delta
+│           ├── 📂 brasil_seriea_2024_classificacao/                 → Arquivo brasil_seriea_2024_classificacao em formato Delta
+│           ├── 📂 brasil_seriea_2024_estatistica_jogador/           → Arquivo brasil_seriea_2024_estatistica_jogador em formato Delta
+│           ├── 📂 brasil_seriea_2024_todas_partidas/                → Arquivo brasil_seriea_2024_todas_partidas em formato Delta
+│           ├── 📂 catalog_classificacao/                            → Catálogo da classificacao em formato Delta
+│           ├── 📂 catalog_estatistica_jogador/                      → Catálogo da estatística de jogadores em formato Delta
+│           ├── 📂 catalog_todas_partidas/                           → Catálogo das partidas em formato Delta
+│       ├── 📂 parquet/                                              → Pasta de arquivos em formato Parquet
+│           ├── 📂 brasil_seriea_2024_classificacao/                 → Arquivo brasil_seriea_2024_classificacao em formato Parquet
+│           ├── 📂 brasil_seriea_2024_estatistica_jogador/           → Arquivo brasil_seriea_2024_estatistica_jogador em formato Parquet
+│           ├── 📂 brasil_seriea_2024_todas_partidas/                → Arquivo brasil_seriea_2024_todas_partidas em formato Parquet
+│   └── 📂 gold/                                                     → Dados modelados prontos para análise e consumo (Data Marts)
+│           ├── 📂 Classificacao_Tier/                               → Tabela com a classificação dos clubes segmentada por tiers e médias de gols
+│           ├── 📂 Mart_Desempenho_Clubes/                           → Tabela com métricas de desempenho geral e defensivo/ofensivo/criação por clube
+│           ├── 📂 Mart_Desempenho_Jogadores/                        → Tabela com estatísticas agregadas de desempenho individual dos jogadores
+│           ├── 📂 Mart_Info_Jogadores/                              → Tabela com informações dos jogadores, posições e versatilidade tática
+│           ├── 📂 todas_partidas/                                   → Tabela com o histórico completo de partidas da temporada
+│           ├── 📂 catalogo_de_dados/                                → Dicionário de dados contendo descrição e significado de cada coluna
 │               ├── 📂 classificacao_tier/                           → Catálogo de dados referente a tabela 'classificacao_tier'
 │               ├── 📂 desempenho_clubes/                            → Catálogo de dados referente a tabela 'desempenho_clubes'
 │               ├── 📂 desempenho_jogadores/                         → Catálogo de dados referente a tabela 'desempenho_jogadores'
 │               ├── 📂 informacao_jogadores/                         → Catálogo de dados referente a tabela 'informacao_jogadores'
 │               ├── 📂 todas_partidas/                               → Catálogo de dados referente a tabela 'todas_partidas'
 |
-├── 📁 notebooks/           → Notebooks com cada etapa do pipeline de dados
+├── 📁 notebooks/                                                    → Notebooks com cada etapa do pipeline de dados
 |
-├── 📁 images/              → Diagramas, capturas de tela e elementos visuais do projeto
-│   ├── 📂 AWS-Redshift/    → Imagens referente ao Redshift, para auxiliar no entendimento do processo
-│   ├── 📂 AWS-S3/          → Imagens referente ao S3, para auxiliar no entendimento do processo
-│   ├── 📂 icons/           → Icones personalizados para o README do GitHub
-│   ├── 📂 notebook-images/ → Imagens que deverão ser anexadas nos notebooks
-│   ├── 📂 pipeline/        → Imagem do Pipeline do Projeto
+├── 📁 images/                                                       → Diagramas, capturas de tela e elementos visuais do projeto
+│   ├── 📂 AWS-Redshift/                                             → Imagens referente ao Redshift, para auxiliar no entendimento do processo
+│   ├── 📂 AWS-S3/                                                   → Imagens referente ao S3, para auxiliar no entendimento do processo
+│   ├── 📂 icons/                                                    → Icones personalizados para o README do GitHub
+│   ├── 📂 notebook-images/                                          → Imagens que deverão ser anexadas nos notebooks
+│   ├── 📂 pipeline/                                                 → Imagem do Pipeline do Projeto
 |
-├── README.md              → Documentação geral do projeto
+├── README.md                                                        → Documentação geral do projeto
 ```
 
 
