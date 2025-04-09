@@ -31,12 +31,14 @@ Além de responder às perguntas, o projeto busca aplicar boas práticas de orga
 ## 📚 Sumário
 
 - [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [🗂️ Origem dos Dados](#%EF%B8%8F-origem-dos-dados)
 - [🔄 Pipeline do Projeto](#-pipeline-do-projeto)
 - [📁 Estrutura de Pastas](#-estrutura-de-pastas)
 - [📒 Notebooks do Projeto](#-notebooks-do-projeto)
 - [🧭 Etapas do Projeto](#-etapas-do-projeto)
 - [📊 Perguntas e Respostas do Projeto](#-perguntas-e-respostas-do-projeto)
 - [✍️ Autoavaliação](#%EF%B8%8F-autoavaliação)
+
 
 
 
@@ -52,6 +54,41 @@ Além de responder às perguntas, o projeto busca aplicar boas práticas de orga
 - **GitHub**: versionamento e documentação do projeto
 
 
+<br></br>
+
+
+## 🗂️ Origem dos Dados
+Os conjuntos de dados utilizados neste projeto foram extraídos do Kaggle e de fontes públicas, todos relacionados ao Campeonato Brasileiro Série A 2024. Foram utilizados os seguintes arquivos:
+
+### BrasilSerieA_2024_ClassificacaoFinal.csv
+Traz a classificação final dos clubes no campeonato, incluindo pontos, vitórias, empates, derrotas, saldo de gols e aproveitamento.  
+Este arquivo foi **criado manualmente** a partir das informações do site da CNN Brasil.
+
+- 🔗 **Link da fonte:** [CNN Brasil - Tabela do Brasileirão](https://www.cnnbrasil.com.br/esportes/futebol/tabela-do-brasileirao/)
+- 📥 **Arquivo original:** `classificacao_brasileirao_2024.csv`
+- ☁️ **Arquivo no AWS S3:** `BrasilSerieA_2024_ClassificacaoFinal.csv`
+
+
+
+### BrasilSerieA_2024_TodasPartidas.csv
+Contém informações de todas as partidas disputadas no campeonato, como data, mandante, visitante, placar e local do jogo.  
+Esse arquivo foi extraído do Kaggle.
+
+- 🔗 **Link da fonte:** [Kaggle - Brazilian Football Championship](https://www.kaggle.com/datasets/gabrielmeireles/brazilian-football-championship)
+- 📥 **Arquivo original:** `BRA.csv`
+- ☁️ **Arquivo no AWS S3:** `BrasilSerieA_2024_TodasPartidas.csv`
+
+
+
+### BrasilSerieA_2024_EstatisticaJogadorPorPartida.csv
+Tabela detalhada com estatísticas individuais por jogador em cada partida: passes, chutes, desarmes, faltas, entre outros.
+
+- 🔗 **Link da fonte:** [Kaggle - Brasileiro Player Stats 2024](https://www.kaggle.com/datasets/eduardopalmieri/brasileiro-player-stats-2024)
+- 📥 **Arquivo original:** `database.csv`
+- ☁️ **Arquivo no AWS S3:** `BrasilSerieA_2024_EstatisticaJogadorPorPartida.csv`
+
+
+  
 <br></br>
 
 
