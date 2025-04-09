@@ -359,8 +359,15 @@ Abaixo, está resumidamente como foi feita a criação e configuração do ambie
 ![Workgroup e Namespace](images/AWS-Redshift/redshift-parametros-conexao.jpg)
 
 ### 🔎 Validação da carga usando o **Query Editor v2** da AWS
+Se todos os parâmetros de conexão estiverem corretos, ao executarmos a ação, os DataFrames que estão no Databricks serão enviados ao Redshift no formato de tabelas.
+
+Na imagem abaixo, podemos confirmar que a conexão foi bem-sucedida e que nossas tabelas estão disponíveis no caminho:
+
+`Serverless: workgroup-brasileirao > native > dev > public.`
+
 ![Workgroup e Namespace](images/AWS-Redshift/redshift-query-editor.jpg)
 
+> ✅ Isso confirma que a etapa de carga para o Data Warehouse foi concluída com sucesso.
 
 <br></br>
 
